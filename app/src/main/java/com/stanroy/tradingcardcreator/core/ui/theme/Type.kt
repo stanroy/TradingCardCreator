@@ -1,4 +1,4 @@
-package com.stanroy.tradingcardcreator.ui.theme
+package com.stanroy.tradingcardcreator.core.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

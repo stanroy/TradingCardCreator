@@ -36,6 +36,17 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "/META-INF/INDEX.LIST"
+            excludes += "/META-INF/DEPENDENCIES"
+            merges += "META-INF/LICENSE.md"
+            merges += "META-INF/LICENSE-notice.md"
+        }
+    }
+
     kotlin {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
@@ -75,6 +86,12 @@ dependencies {
 
     // Coil
     implementation(libs.coil.compose)
+
+    // OpenAI
+    implementation(libs.openai.client)
+
+    // Ktor
+    implementation(libs.ktor.client.android)
 
 
     testImplementation(libs.junit)
